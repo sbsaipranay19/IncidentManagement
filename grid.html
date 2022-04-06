@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid-item1 {
+        grid-area: tf1;
+      }
+      .grid-item2 {
+        grid-area: tf2;
+      }
+      .grid-item3 {
+        grid-area: tf3;
+      }
+      .grid-item4 {
+        grid-area: tf4;
+      }
+      .grid-item5 {
+        grid-area: tf5;
+      }
+      .grid-item6 {
+        grid-area: tf6;
+      }
+      .grid-item7 {
+        grid-area: tf7;
+      }
+      .grid-item8 {
+        grid-area: tf8;
+      }
+      .grid-item9 {
+        grid-area: tf9;
+      }
+      .grid-item10 {
+        grid-area: tf10;
+      }
+      .grid-item11 {
+        grid-area: tf11;
+      }
+      .grid-item12 {
+        grid-area: tf12;
+      }
+      .grid-item13 {
+        grid-area: tf13;
+      }
+      .grid-item14 {
+        grid-area: tf14;
+      }
+      .grid-item15 {
+        grid-area: tf15;
+      }
+      .grid-item16 {
+        grid-area: tf16;
+      }
+      .grid-item17 {
+        grid-area: tf17;
+      }
+      .grid-item0 {
+        grid-area: tf0;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-areas:
+          "tf0 tf0 tf0 tf0 tf0 tf0 tf0 tf0 tf0 tf0"
+          "tf1 tf2 tf2 tf2 tf3 tf4 tf4 tf5 tf6 tf6"
+          "tf7 tf8 tf8 tf8 tf9 tf10 tf10 tf11 tf12 tf12"
+          "tf13 tf14 tf14 tf14 tf14 tf14 tf14 tf15 tf16 tf16";
+        border: 1px solid #000;
+        margin-bottom: 30px;
+      }
+
+      .grid-container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid #000;
+        text-align: center;
+        padding: 20px;
+        font-size: 30px;
+      }
+      .grid2-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+
+      .grid-item {
+        border: 1px solid #000;
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+      }
+
+      .button {
+        margin-top: 30px;
+        padding: 5px;
+      }
+
+      .submit {
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent" id="parent">
+    <div class="grid-container">
+      <div class="grid-item0">Major Incident Management Notification</div>
+      <div class="grid-item1">Incident Number</div>
+      <div class="grid-item2"><input type="text" /></div>
+      <div class="grid-item3">Incident Status</div>
+      <div class="grid-item4">
+        
+       
+      <input
+        id="status"
+        name="push-notifications"
+        type="radio"
+        class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+      />
+      <label
+        for="push-email"
+        class="ml-3 block text-sm font-medium text-gray-700"
+      >
+        Open
+      </label>
+
+      <input
+        id="push-nothing"
+        name="push-notifications"
+        type="radio"
+        class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+      />
+      <label
+        for="push-nothing"
+        class="ml-3 block text-sm font-medium text-gray-700"
+      >
+        Closed
+      </label>
+      </div>
+      <div class="grid-item5">Start Time</div>
+      <div class="grid-item6">
+        <input
+          type="date"
+          id="date-time"
+          autocomplete="current-date-time"
+        /><br />
+        <input type="time" id="time" autocomplete="current-date-time" />
+      </div>
+      <div class="grid-item7">Incident Manager</div>
+      <div class="grid-item8"><input type="text" /></div>
+      <div class="grid-item9">Incident Priority</div>
+      <div class="grid-item10">
+        <select id="priority" autocomplete="status-name">
+          <option disabled selected>Select severity</option>
+          <option>Severity 1</option>
+          <option>Severity 2</option>
+          <option>Severity 3</option>
+        </select>
+      </div>
+      <div class="grid-item11">Estimated End Time</div>
+      <div class="grid-item12"><input type="text" /></div>
+      <div class="grid-item13">Bridge Details</div>
+      <div class="grid-item14"><input type="text" /></div>
+      <div class="grid-item15">Services Impacted</div>
+      <div class="grid-item16"><input type="text" /></div>
+    </div>
+    <div class="grid2-container">
+      <div class="grid-item">Incident Details</div>
+      <div class="grid-item">Business Impact</div>
+      <div class="grid-item">Incident Timeline</div>
+      <div class="grid-item">
+        <textarea name="incident_details" rows="4" cols="50"></textarea>
+      </div>
+      <div class="grid-item">
+        <textarea name="business_impact" rows="4" cols="50"></textarea>
+      </div>
+      <div class="grid-item">
+        <textarea name="incident_timeline" rows="4" cols="50"></textarea>
+      </div>
+    </div>
+    </div>
+    <div class="submit"><button class="button" onclick="myFunction()">Submit</button></div>
+    <p id="demo">gdgsd</p>
+    <script src="action.js"></script>
+  </body>
+</html>
